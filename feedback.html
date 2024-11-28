@@ -15,31 +15,34 @@
       });
    })();
 </script>
-    <script>
-        
-        function sendEmail(e) {
-            e.preventDefault();  
+<script>
+    function sendEmail(e) {
+        e.preventDefault();
 
-            const formData = {
-                name: document.getElementById("name").value,
-                email: document.getElementById("email").value,
-                subject: document.getElementById("subject").value,
-                message: document.getElementById("message").value,
-            };
+        const submitButton = document.getElementById("submit");
+        if (!submitButton) return;
+        submitButton.disabled = true;
 
-           
-            emailjs.send("service_u91m769", "template_f7o3lld", formData)
-                .then(function(response) {
-                   
-                    alert("Your Review Has Been Collected!");
-                    document.getElementById("contact-form").reset(); 
-                }, function(error) {
-                
-                    alert("Failed to send message. Please try again.");
-                    console.error("Error:", error);
-                });
-        }
-    </script>
+        const formData = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            subject: document.getElementById("subject").value,
+            message: document.getElementById("message").value,
+        };
+
+        emailjs.send("service_u91m769", "template_f7o3lld", formData)
+            .then(function(response) {
+                alert("Your Review Has Been Collected!");
+                document.getElementById("contact-form").reset();
+                submitButton.disabled = false;
+            })
+            .catch(function(error) {
+                alert("Failed to send message. Please try again.");
+                console.error("Error:", error);
+                submitButton.disabled = false;
+            });
+    }
+</script>
     <title>Bharat Chronicles | Contact Us</title>
     <style>
         .underline-hover::before {
@@ -148,12 +151,12 @@
     <nav class="bg-white flex items-center justify-between text-black max-h-20 py-5  max-w-6xl">
         <img src="images/bharat_chronicles-removebg-preview.png" alt="Logo" class="max-h-20 mr-4 fade-in">
         <ul class="flex space-x-5">
-            <li class="cursor-pointer"><a href="index.html" class="no-underline hover:text-red-500 underline-hover fade-in">Home</a></li>
-            <li class="cursor-pointer"><a href="history.html" class="no-underline hover:text-red-500 underline-hover fade-in">Brief History</a></li>
-            <li class="cursor-pointer"><a href="wonders.html" class="no-underline hover:text-red-500 underline-hover fade-in">Wonders Of India</a></li>
-            <li class="cursor-pointer"><a href="Geography.html" class="no-underline hover:text-red-500 underline-hover fade-in">Geography</a></li>
-            <li class="cursor-pointer"><a href="patriots.html" class="no-underline hover:text-red-500 underline-hover fade-in">Patriots</a></li>
-            <li class="cursor-pointer"><a href="feedback.html" class="no-underline hover:text-red-500 underline-hover fade-in active">Feedback</a></li>
+            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in' href='/'>Home</a></li>
+            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in' href='/history'>Brief History</a></li>
+            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in' href='/wonders'>Wonders Of India</a></li>
+            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in' href='/geography'>Geography</a></li>
+            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in' href='/patriots'>Patriots</a></li>
+            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in active' href='/feedback'>Feedback</a></li>
         </ul>
     </nav>
 
@@ -170,7 +173,7 @@
                         <input type="email" id="email" name="email" placeholder="Email/Optional (Use test@example.us)" class="w-full rounded-md h-12 px-6 bg-[#f0f1f2] text-sm outline-none" required />
                         <input type="text" id="subject" name="subject" placeholder="Subject" class="w-full rounded-md h-12 px-6 bg-[#f0f1f2] text-sm outline-none" required />
                         <textarea id="message" name="message" placeholder="Feedback" rows="6" class="w-full rounded-md px-6 bg-[#f0f1f2] text-sm pt-3 outline-none" required></textarea>
-                        <button type="submit" class="text-gray-800 bg-green-200 hover:bg-green-300 font-semibold rounded-md text-sm px-6 py-3 block w-full">Send Message</button>
+                        <button type="submit" id="submit" class="text-gray-800 bg-green-200 hover:bg-green-300 font-semibold rounded-md text-sm px-6 py-3 block w-full">Send Message</button>
                     </form>
                 </div>
 
