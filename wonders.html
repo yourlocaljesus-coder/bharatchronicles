@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Bharat Chronicles | Wonders</title>
+    <style>
+        .underline-hover::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -4px;
+            transform: translateX(-50%) scaleX(0);
+            width: 100%;
+            height: 2px;
+            background-color: Red;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .underline-hover:hover::before {
+            transform: translateX(-50%) scaleX(1);
+        }
+
+        .underline-hover {
+            position: relative;
+        }
+
+        .active {
+            color: red;
+        }
+
+        .active::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -4px;
+            transform: translateX(-50%) scaleX(1);
+            width: 100%;
+            height: 2px;
+            background-color: red;
+        }
+
+        nav {
+            position: fixed;
+            top: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            padding: 20px 30px;
+            background-color: rgba(50, 50, 50, 0.9);
+            border-radius: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            background: linear-gradient(to bottom, #4a90e2, #50a3a2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            color: white;
+            max-width: 85%; 
+	    max-height: 60%;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px; 
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .card .card-content {
+            padding: 30px;
+        }
+
+        .card .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .card .card-description {
+            font-size: 1rem; 
+        }
+
+        .about-us-section {
+            padding: 80px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .about-us-title {
+            font-size: 3rem;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+
+        .pop-out-card {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            max-width: 350px;
+            margin: 20px;
+            padding: 20px;
+            height: 400px; 
+        }
+
+        .pop-out-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-t from-blue-700 to-blue-400">
+    <nav class="bg-white flex items-center justify-between text-black max-h-20 py-5 max-w-6xl">
+        <img src="images/bharat_chronicles-removebg-preview.png" alt="Logo" class="max-h-20 mr-4 fade-in">
+        <ul class="flex space-x-5">
+            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in' href='/'>Home</a></li>
+            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in' href='/history'>Brief History</a></li>
+            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in active' href='/wonders'>Wonders Of India</a></li>
+            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in' href='/geography'>Geography</a></li>
+            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in' href='/patriots'>Patriots</a></li>
+            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in' href='/feedback'>Feedback</a></li>
+    </nav>
+
+    <section class="main bg-gradient-to-t from-blue-700 to-blue-400">
+        <div class="flex flex-col items-center pt-40 text-white">
+            <h1 class="font-serif text-9xl mb-0 justify-center text-white underline">Wonders of India</h1>
+            <div class="container mx-auto p-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 items-center">
+                    <div class="pop-out-card">
+                        <img src="images/tajmahal.png" alt="Card Image" class="w-full h-40 object-cover" />
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold mb-2 text-black">Taj Mahal</h3>
+                            <p class="text-sm text-gray-600">Built by Emperor Shah Jahan in memory of his wife, Mumtaz Mahal, the Taj Mahal is a symbol of eternal love. Made of white marble with intricate designs, this UNESCO World Heritage Site attracts millions of visitors every year.</p>
+                        </div>
+                    </div>
+                    <div class="pop-out-card">
+                        <img src="images/qutubminar.png" alt="Card Image" class="w-full h-40 object-cover" />
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold mb-2 text-black">Qutub Minar</h3>
+                            <p class="text-sm text-gray-600">The Qutub Minar, built by Qutb al-Din Aibak in the 12th century, is the tallest brick minaret in the world. Surrounded by historical ruins, it is a magnificent example of Indo-Islamic architecture and a major tourist attraction.</p>
+                        </div>
+                    </div>
+                    <div class="pop-out-card">
+                        <img src="images/redfort.png" alt="Card Image" class="w-full h-40 object-cover" />
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold mb-2 text-black">Red Fort</h3>
+                            <p class="text-sm text-gray-600">The Red Fort, constructed by Shah Jahan in 1638, is a symbol of India’s history and independence. Its massive red sandstone walls and Mughal-inspired structures make it a must-see for anyone visiting Delhi.</p>
+                        </div>
+                    </div>
+                    <div class="pop-out-card">
+                        <img src="images/suntemple.png" alt="Card Image" class="w-full h-40 object-cover" />
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold mb-2 text-black">Sun Temple</h3>
+                            <p class="text-sm text-gray-600">The Sun Temple, shaped like a massive chariot, was built in the 13th century to honor the Sun God. Its intricately carved wheels and horses make it one of India’s most impressive UNESCO World Heritage Sites.</p>
+                        </div>
+                    </div>
+                    <div class="pop-out-card">
+                        <img src="images/gateway.png" alt="Card Image" class="w-full h-40 object-cover" />
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold mb-2 text-black">Gateway of India</h3>
+                            <p class="text-sm text-gray-600">The Gateway of India, built in 1924, commemorates the visit of King George V and Queen Mary. Overlooking the Arabian Sea, this iconic structure blends Indo-Saracenic architecture and is a cultural hub.</p>
+                        </div>
+                    </div>
+                    <div class="pop-out-card">
+                        <img src="images/hawamahal.png" alt="Card Image" class="w-full h-40 object-cover" />
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold mb-2 text-black">Hawa Mahal</h3>
+                            <p class="text-sm text-gray-600">Constructed in 1799, the Hawa Mahal, or the "Palace of Winds," is an architectural masterpiece in Jaipur. Its façade features 953 intricately designed windows that allowed royal women to observe street festivals while maintaining privacy.</p>
+                        </div>
+                    </div>
+                    <div class="pop-out-card">
+                        <img src="images/ajanta.png" alt="Card Image" class="w-full h-40 object-cover" />
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold mb-2 text-black">Ajanta and Ellora Caves</h3>
+                            <p class="text-sm text-gray-600">Ajanta and Ellora Caves, UNESCO World Heritage Sites that showcase the artistic achievements of ancient India. Ajanta features stunning Buddhist frescoes, while Ellora’s rock-cut monuments represent a harmonious blend of Hindu, Jain, and Buddhist cultures. These caves continue to fascinate visitors.</p>
+                        </div>
+                    </div>
+                    <div class="pop-out-card">
+                        <img src="images/meenakshi.png" alt="Card Image" class="w-full h-40 object-cover" />
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold mb-2 text-black">Meenakshi Temple</h3>
+                            <p class="text-sm text-gray-600">Dedicated to Goddess Meenakshi, this temple is a brilliant example of Dravidian architecture. Its towering gopurams are covered with colorful carvings depicting mythological stories. As a major cultural and spiritual center, the Meenakshi Temple attract tourists from around the world.</p>
+                        </div>
+                    </div>
+                    <div class="pop-out-card">
+                        <img src="images/golden.png" alt="Card Image" class="w-full h-40 object-cover" />
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold mb-2 text-black">Golden Temple</h3>
+                            <p class="text-sm text-gray-600">The Golden Temple, or Harmandir Sahib, is a serene spiritual hub and the holiest shrine of Sikhism. Surrounded by the Amrit Sarovar, its gold-covered dome glistens in the sunlight. Pilgrims and visitors from across the globe come to experience its peaceful atmosphere and learn about its cultural significance.</p>
+                        </div>
+                    </div>
+                    <div class="pop-out-card">
+                        <img src="images/charminar.png" alt="Card Image" class="w-full h-40 object-cover" />
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold mb-2 text-black">Charminar</h3>
+                            <p class="text-sm text-gray-600">Built in 1591 by Muhammad Quli Qutb Shah, the Charminar is an iconic structure in Hyderabad. With its four grand arches and minarets, it represents Indo-Islamic architecture. Surrounded by bustling markets, the Charminar is a vibrant cultural and historical landmark that draws countless visitors every year.</p>
+                        </div>
+                    </div>
+                    <div class="pop-out-card">
+                        <img src="images/rani.png" alt="Card Image" class="w-full h-40 object-cover" />
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold mb-2 text-black">Rani ki Vav</h3>
+                            <p class="text-sm text-gray-600">Rani ki Vav, an 11th-century stepwell, is a UNESCO World Heritage Site known for its intricate carvings. Built to honor the king by his queen, it features detailed sculptures and mythological depictions. This marvel of engineering highlights India’s advanced water management systems and artistic achievements of the time.</p>
+                        </div>
+                    </div>
+                    <div class="pop-out-card">
+                        <img src="images/sanchistupa.png" alt="Card Image" class="w-full h-40 object-cover" />
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold mb-2 text-black">Sanchi Stupa</h3>
+                            <p class="text-sm text-gray-600">Built in the 3rd century BCE by Emperor Ashoka, the Sanchi Stupa is one of the oldest stone structures in India. This UNESCO World Heritage Site is surrounded by intricately carved gateways that narrate stories of Buddha’s life and teachings. It remains a symbol of Buddhist heritage and peaceful spirituality.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</section>
+        <hr>
+        <section class="about-us-section bg-gradient-to-t from-blue-400 to-blue-700" id="about-us">
+            <h2 class="about-us-title">About Us</h2>
+            <div class="card">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.6567905860034!2d77.35540691174769!3d28.39943239452555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdcddb26bdc75%3A0xb50944a190a0da51!2sAravali%20International%20School%20Sec-85!5e0!3m2!1sen!2sin!4v1731078474856!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="500" 
+                    style="border:0;" 
+                    allowfullscreen 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <div class="card-content">
+                    <h3 class="card-title">Aravali International School, Sector-85</h3>
+                    <p class="card-description">Aravali International School, Sector-85, Greater-Faridabad, Haryana, India</p>
+                    <p>&copy; BHARAT CHRONICLES | WHERE INDIA'S PAST MEETS ITS FUTURE</p>
+                    <div class="flex justify-center space-x-6 mt-8 items-center">
+                        <a href="https://www.youtube.com/@aravaliinternationalschool1671" target="_blank" rel="noopener noreferrer" class="text-red-600 hover:text-red-800 transition duration-300">
+                            <img src="images/youtube.png" alt="YouTube" class="max-w-12 max-h-12">
+                        </a>
+                        <a href="https://in.linkedin.com/company/aravali-international-school-faridabad" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition duration-300">
+                            <img src="images/linkedin.png" alt="LinkedIn" class="max-w-12 max-h-12">
+                        </a>
+                        <a href="https://www.instagram.com/aravalischool85/?hl=en" target="_blank" rel="noopener noreferrer" class="text-pink-500 hover:text-pink-900 transition duration-300">
+                            <img src="images/instagram.png" alt="Instagram" class="max-w-12 max-h-12">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

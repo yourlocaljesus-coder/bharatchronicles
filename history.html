@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Bharat Chronicles | History</title>
+    <style>
+        .underline-hover::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -4px;
+            transform: translateX(-50%) scaleX(0);
+            width: 100%;
+            height: 2px;
+            background-color: Red;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .underline-hover:hover::before {
+            transform: translateX(-50%) scaleX(1);
+        }
+
+        .underline-hover {
+            position: relative;
+        }
+
+        .active {
+            color: red;
+        }
+
+        .active::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -4px;
+            transform: translateX(-50%) scaleX(1);
+            width: 100%;
+            height: 2px;
+            background-color: red;
+        }
+        nav {
+            position: fixed;
+            top: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            padding: 20px 30px;
+            background-color: rgba(50, 50, 50, 0.9);
+            border-radius: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            background: linear-gradient(to bottom, #4a90e2, #50a3a2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            color: white;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+h1 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            background: linear-gradient(to bottom, #4a90e2, #50a3a2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            color: white;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .card .card-content {
+            padding: 30px;
+        }
+
+        .card .card-title {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .card .card-description {
+            font-size: 1.25rem;
+        }
+
+        .card-title {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .card-description {
+            font-size: 1.25rem;
+        }
+
+        .about-us-section {
+            padding: 80px 0;
+            background: linear-gradient(to top, #60a5fa, #1d4ed8);
+            color: white;
+            text-align: center;
+        }
+
+        .about-us-title {
+            font-size: 3rem;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+         .pop-out-card {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            max-width: 350px;
+            margin: 20px;
+            padding: 20px;
+        }
+        .pop-out-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="main bg-gradient-to-t from-blue-700 to-blue-400">
+    <nav class="bg-white flex items-center justify-between text-black max-h-20 py-5 max-w-6xl">
+        <img src="images/bharat_chronicles-removebg-preview.png" alt="Logo" class="max-h-20 mr-4 fade-in">
+        <ul class="flex space-x-5">
+            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in' href='/'>Home</a></li>
+            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in active' href='/history'>Brief History</a></li>
+            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in' href='/wonders'>Wonders Of India</a></li>
+            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in' href='/geography'>Geography</a></li>
+            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in' href='/patriots'>Patriots</a></li>
+            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in' href='/feedback'>Feedback</a></li>
+    </nav>
+
+    <div class="main bg-gradient-to-t from-blue-700 to-blue-400 flex flex-col items-center justify-start pt-40 text-white">
+        <h1 class="font-serif text-9xl mb-11 justify-center underline">History of India</h1>
+
+        <div class="flex flex-wrap justify-center items-stretch space-x-4 px-8">
+            <div class="pop-out-card">
+                <h2 class="text-xl font-semibold mb-4 text-gray-900">The Indus Valley Civilization (3300–1300 BCE)</h2>
+                <p class="text-gray-700 mb-4">The Indus Valley Civilization was one of the world's earliest urban cultures, centered around the cities of Harappa and Mohenjo-Daro. Known for its advanced architecture, complex urban planning, and undeciphered script, it laid the foundations of civilization in India.</p>
+            </div>
+            <div class="pop-out-card">
+                <h2 class="text-xl font-semibold mb-4 text-gray-900">Vedic Period (1500–500 BCE)</h2>
+                <p class="text-gray-700 mb-4">The Vedic period marks the arrival of the Indo-Aryans and the composition of the Vedas, ancient sacred texts of Hinduism. It shaped Indian culture, language, and religion, laying the roots for concepts like karma, dharma, and the caste system.</p>
+            </div>
+            <div class="pop-out-card">
+                <h2 class="text-xl font-semibold mb-4 text-gray-900">The Mauryan Empire (322–185 BCE)</h2>
+                <p class="text-gray-700 mb-4">Founded by Chandragupta Maurya, the Maurya Empire unified much of India under a centralized administration. Emperor Ashoka, Chandragupta's grandson, promoted Buddhism and non-violence, spreading his messages through inscriptions on rock and pillar edicts.                </p>
+            </div>
+            <div class="pop-out-card">
+                <h2 class="text-xl font-semibold mb-4 text-gray-900">The Gupta Empire (c. 320–550 CE)</h2>
+                <p class="text-gray-700 mb-4">Often called the "Golden Age" of India, the Gupta Empire was a period of great advancements in science, art, literature, and mathematics. Innovations like the concept of zero and significant developments in astronomy and medicine emerged during this time.</p>
+            </div>
+            <div class="pop-out-card">
+                <h2 class="text-xl font-semibold mb-4 text-gray-900">Arrival of Islam (712 CE onward)</h2>
+                <p class="text-gray-700 mb-4">The arrival of Islam through traders and later, invaders, brought significant cultural and religious influences. The Delhi Sultanate, established in 1206, unified vast regions and saw the rise of a unique Indo-Islamic cultural blend.</p>
+            </div>
+            <div class="pop-out-card">
+                <h2 class="text-xl font-semibold mb-4 text-gray-900">The Mughal Empire (1526–1857)</h2>
+                <p class="text-gray-700 mb-4">The Mughal Empire was one of India's most powerful empires, known for its opulent art, architecture, and the spread of Persian culture. Icons like the Taj Mahal, built by Emperor Shah Jahan, symbolize the architectural achievements of this era.</p>
+            </div>
+            <div class="pop-out-card">
+                <h2 class="text-xl font-semibold mb-4 text-gray-900">Bhakti and Sufi Movements (14th–17th Centuries)</h2>
+                <p class="text-gray-700 mb-4">The Bhakti and Sufi movements emphasized devotion and unity across religious boundaries. Saints like Kabir, Mirabai, and Guru Nanak promoted messages of love, tolerance, and spiritual harmony, impacting Indian spirituality and social fabric.</p>
+            </div>
+            <div class="pop-out-card">
+                <h2 class="text-xl font-semibold mb-4 text-gray-900"> European Colonization Begins (1498–1757)</h2>
+                <p class="text-gray-700 mb-4">With Vasco da Gama's arrival in 1498, European powers like the Portuguese, Dutch, French, and British started establishing trading posts in India. This eventually led to British dominance and the gradual decline of Indian regional powers.</p>
+            </div>
+            <div class="pop-out-card">
+                <h2 class="text-xl font-semibold mb-4 text-gray-900">British Rule and the East India Company (1757–1858)</h2>
+                <p class="text-gray-700 mb-4">The British East India Company controlled large parts of India through alliances, treaties, and warfare. The exploitation of resources and imposition of British policies caused economic hardship and set the stage for Indian resistance.</p>
+            </div>
+            <div class="pop-out-card">
+                <h2 class="text-xl font-semibold mb-4 text-gray-900">The Revolt of 1857</h2>
+                <p class="text-gray-700 mb-4">Often called the First War of Indian Independence, the 1857 revolt was a major, though ultimately unsuccessful, uprising against British rule. Sparked by various grievances, it marked the beginning of a broader struggle for India's freedom.</p>
+            </div>
+            <div class="pop-out-card">
+                <h2 class="text-xl font-semibold mb-4 text-gray-900">The Freedom Movement and Gandhi (1915–1947)</h2>
+                <p class="text-gray-700 mb-4">Led by Mahatma Gandhi, the Indian freedom movement emphasized nonviolent resistance, including the Salt March and Quit India Movement. Figures like Nehru, Patel, and Bose were pivotal in securing India's independence from British rule in 1947.</p>
+            </div>
+            <div class="pop-out-card">
+                <h2 class="text-xl font-semibold mb-4 text-gray-900">Post-Independence India (1947–Present)</h2>
+                <p class="text-gray-700 mb-4">After gaining independence, India became a democratic republic in 1950. Since then, it has grown into one of the world's largest economies, known for its technological advances, cultural diversity, and democratic values. Today, India stands as a prominent global player.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <hr>
+    <section class="about-us-section" id="about-us">
+        <h2 class="about-us-title">About Us</h2>
+        <div class="card">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.6567905860034!2d77.35540691174769!3d28.39943239452555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdcddb26bdc75%3A0xb50944a190a0da51!2sAravali%20International%20School%20Sec-85!5e0!3m2!1sen!2sin!4v1731078474856!5m2!1sen!2sin" 
+                width="1800" 
+                height="500" 
+                style="border:0;" 
+                allowfullscreen 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <div class="card-content">
+                <h3 class="card-title">Aravali International School, Sector-85</h3>
+                <p class="card-description">Aravali International School, Sector-85, Greater-Faridabad, Haryana, India</p>
+                <p>&copy; BHARAT CHRONICLES | WHERE INDIA'S PAST MEETS ITS FUTURE</p>
+                <div class="pl-96 pr-96 max-w-screen flex justify-center space-x-6 mt-8 items-center">
+                    <a href="https://www.youtube.com/@aravaliinternationalschool1671" target="_blank" rel="noopener noreferrer" class="text-red-600 hover:text-red-800 transition duration-300">
+                        <img src="images/youtube.png" alt="YouTube" class="max-w-12 max-h-12">
+                    </a>
+                    <a href="https://in.linkedin.com/company/aravali-international-school-faridabad" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition duration-300">
+                        <img src="images/linkedin.png" alt="LinkedIn" class="max-w-12 max-h-12">
+                    </a>
+                    <a href="https://www.instagram.com/aravalischool85/?hl=en" target="_blank" rel="noopener noreferrer" class="text-pink-500 hover:text-pink-900 transition duration-300">
+                        <img src="images/instagram.png" alt="Instagram" class="max-w-12 max-h-12">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
