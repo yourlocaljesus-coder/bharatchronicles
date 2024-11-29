@@ -6,7 +6,7 @@
 2. then, install react using the same steps
 3. ENJOY THE WEBSITE (report if any bugs)
 
-# Update 1.1 - Website has been ported to Tailwind css!
+# Update 1.1 - Website has been ported to Tailwind CSS!
 
 Hello there! Coders, Our Website Bharat Chronicles has been ported to tailwindcss we have included the tailwind port in the files and the tailwind
 config file in the branch so, please be sure to review and report suggestions and improvements to the following!
