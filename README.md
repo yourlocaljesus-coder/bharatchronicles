@@ -4,7 +4,7 @@
 
 1. using node.js install vite (npm install vite) [you have to do this in the vs code terminal after making a folder and putting all the files in it and opening thru the folder open function in vs code)
 2. then, install react using the same steps
-3. # ENJOY THE WEBSITE (report if any bugs)
+3. ENJOY THE WEBSITE (report if any bugs)
 
 # Update 1.1 - Website has been ported to Tailwind css!
 
