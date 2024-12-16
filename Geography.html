@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Bharat Chronicles | Geography</title>
+    <style>
+    .underline-hover::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -4px;
+        transform: translateX(-50%) scaleX(0);
+        width: 100%;
+        height: 2px;
+        background-color: Red;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .underline-hover:hover::before {
+        transform: translateX(-50%) scaleX(1);
+    }
+
+    .underline-hover {
+        position: relative;
+    }
+
+    .active {
+        color: red;
+    }
+
+    .active::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -4px;
+        transform: translateX(-50%) scaleX(1);
+        width: 100%;
+        height: 2px;
+        background-color: red;
+    }
+    nav {
+        position: fixed;
+        top: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        padding: 20px 30px;
+        background-color: rgba(50, 50, 50, 0.9);
+        border-radius: 30px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+    }
+    .card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        background: linear-gradient(to bottom, #4a90e2, #50a3a2);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        color: white;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    h1 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+    .card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        background: linear-gradient(to bottom, #4a90e2, #50a3a2);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        color: white;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .card .card-content {
+        padding: 30px;
+    }
+
+    .card .card-title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .card .card-description {
+        font-size: 1.25rem;
+    }
+
+    .card-title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .card-description {
+        font-size: 1.25rem;
+    }
+
+    .about-us-section {
+        padding: 80px 0;
+        color: white;
+        text-align: center;
+    }
+
+    .about-us-title {
+        font-size: 3rem;
+        margin-bottom: 40px;
+        font-weight: bold;
+    }
+     .pop-out-card {
+        border-radius: 20px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        padding: 20px;
+        width: 1400px;
+    }
+    .pop-out-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    
+    </style>
+  </head>
+  <body class="bg-gradient-to-t from-blue-400 to-blue-700 min-h-screen min-w-screen ">
+    <nav class="bg-white border-gray-200 dark:bg-white max-w-[1280px] rounded-s-8xl"> 
+        <div class="flex flex-wrap items-center justify-between w-full"> 
+            <a href="https://bharatchronicles.onrender.com" class="flex items-center space-x-3 rtl:space-x-reverse"> 
+                <img src="images/bharat_chronicles-removebg-preview.png" class="max-h-16" alt="Bharat Chronicles" /> 
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-26 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul class="w-full font-medium text-lg flex flex-col  md:p-0  no-border rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:bg-white dark:bg-white md:dark:bg-white dark:border-gray-700 md:justify-end">
+                    <li>
+                        <a href="index.html" class="block py-1 px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 no-underline hover:text-red-500 underline-hover md:p-0 dark:text-black md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-red-500 md:dark:hover:bg-transparent">Home</a>
+                    </li>
+                    <li>
+                        <a href="history.html" class="block py-1 px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 no-underline hover:text-red-500 underline-hover md:p-0 dark:text-black md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-red-500 md:dark:hover:bg-transparent">Brief History</a>
+                    </li>
+                    <li>
+                        <a href="wonders.html" class="block py-1 px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 no-underline hover:text-red-500 underline-hover md:p-0 dark:text-black md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-red-500 md:dark:hover:bg-transparent">Wonders of India</a>
+                    </li>
+                    <li>
+                        <a href="Geography.html" class="block py-1 px-2 bg-gray-300 rounded md:bg-transparent no-underline hover:text-red-500 underline-hover md:p-0 dark:text-black md:dark:text-red-500 active" aria-current="page">Geography</a>
+                    </li>
+                    <li>
+                        <a href="patriots.html" class="block py-1 px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 no-underline hover:text-red-500 underline-hover md:p-0 dark:text-black md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-red-500 md:dark:hover:bg-transparent">Patriots</a>
+                    </li>
+                    <li>
+                        <a href="Feedback.html" class="block py-1 px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 no-underline hover:text-red-500 underline-hover md:p-0 dark:text-black md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-red-500 md:dark:hover:bg-transparent">Feedback</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <script>
+        const menuButton = document.querySelector('[data-collapse-toggle="navbar-default"]');
+        const navbar = document.getElementById('navbar-default');
+    
+        menuButton.addEventListener('click', () => {
+            const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+            menuButton.setAttribute('aria-expanded', !isExpanded);
+            navbar.classList.toggle('hidden', isExpanded);
+        });
+    </script>
+    
+    
+    <section class="main bg-gradient-to-t from-blue-700 to-blue-400">
+        <div class="flex flex-col items-center pt-40">
+            <h1 class="font-serif text-center text-white mb-0 underline" style="font-size: clamp(3rem, 8vw, 9rem);">
+                Geography
+            </h1>
+            <div class="flex flex-col lg:flex-row items-center justify-center max-w-full px-4 pt-20 pb-28">
+                <div class="pop-out-card w-full lg:w-[75%] xl:w-[80%] h-auto flex flex-col lg:flex-row border rounded-lg overflow-hidden shadow-lg bg-white">
+                  <!-- Text Section -->
+                  <div class="w-full lg:w-[50%] h-full p-8 bg-white flex flex-col justify-center">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-gray-800 underline">Indian Geography</h2>
+                    <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
+                      <h4 class="text-xl sm:text-2xl font-semibold">1. Overview of Indian Geography</h4>
+                      India is a vast country with diverse geographical features like mountains, deserts, and coastlines.
+                      <br><br>
+              
+                      <h4 class="text-xl sm:text-2xl font-semibold">2. The Himalayan Mountain Range</h4>
+                      The Himalayas are the world’s highest mountain range with peaks like Everest and Kanchenjunga.
+                      <br><br>
+              
+                      <h4 class="text-xl sm:text-2xl font-semibold">3. The Indo-Gangetic Plains</h4>
+                      The Indo-Gangetic plains are formed by the Ganges, Brahmaputra, and Indus rivers, supporting agriculture.
+                      <br><br>
+              
+                      <h4 class="text-xl sm:text-2xl font-semibold">4. The Deccan Plateau</h4>
+                      The Deccan Plateau covers southern India, rich in minerals, with rivers like Godavari and Krishna.
+                      <br><br>
+              
+                      <h4 class="text-xl sm:text-2xl font-semibold">5. The Thar Desert</h4>
+                      The Thar Desert, located in Rajasthan, has unique wildlife and a rich cultural heritage.
+                      <br><br>
+              
+                      <h4 class="text-xl sm:text-2xl font-semibold">6. Coastal Regions</h4>
+                      India has a 7,500 km coastline along the Arabian Sea and Bay of Bengal.
+                      <br><br>
+              
+                      <h4 class="text-xl sm:text-2xl font-semibold">7. The Islands of India</h4>
+                      India’s Andaman & Nicobar and Lakshadweep islands are famous for their tropical ecosystems.
+                      <br><br>
+              
+                      <h4 class="text-xl sm:text-2xl font-semibold">8. The River Systems of India</h4>
+                      India’s rivers like the Ganges, Brahmaputra, and Indus are essential for agriculture and economy.
+                      <br><br>
+              
+                      <h4 class="text-xl sm:text-2xl font-semibold">9. The Western and Eastern Ghats</h4>
+                      The Western Ghats run parallel to the western coast, rich in biodiversity. The Eastern Ghats are lower in elevation and stretch along India’s eastern coast.
+                      <br><br>
+              
+                      <h4 class="text-xl sm:text-2xl font-semibold">10. The Climate of India</h4>
+                      India experiences tropical monsoons and temperate climates, with most rainfall between June-September.
+                    </p>
+                  </div>
+                  <div class="w-full lg:w-[50%] min-h-[100%] bg-cover bg-center lg:block">
+                    <img src="images/assam.png" alt="Indian Geography" class="w-full h-full object-cover" />
+                  </div>
+                </div>
+            </div>              
+    </section>
+      </div>
+
+       <hr>
+       <footer class="bg-gradient-to-t from-blue-400 to-blue-700 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="about-us">
+                    <h3 class="text-2xl font-semibold mb-4">About Us</h3>
+                    <p class="text-lg">We are a platform that connects India's rich cultural heritage with its bright future. Stay tuned for exciting content and more!</p>
+                </div>
+                <div class="contact-info text-center md:text-left">
+                    <h3 class="text-2xl font-semibold mb-4">Contact Us</h3>
+                    <a href="feedback.html" class="font-bold no-underline">
+                        <p>Click here to give your feedback</p>
+                    </a>
+                    <p class="text-lg">(+91) 8588802550</p>
+                    <p class="text-lg">Greater Faridabad, Haryana, India</p>
+                </div>
+
+                <div class="social-links text-center md:text-right">
+                    <h3 class="text-2xl font-semibold mb-4">Follow Us</h3>
+                    <div class="flex justify-center space-x-6 mt-6">
+                        <a href="https://www.youtube.com/@aravaliinternationalschool1671" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="hover:scale-110 transform transition duration-300">
+                            <img src="images/youtube.png" alt="YouTube" class="logo max-w-12 md:max-w-16 lg:max-w-20">
+                        </a>
+                        <a href="https://in.linkedin.com/company/aravali-international-school-faridabad" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="hover:scale-110 transform transition duration-300">
+                            <img src="images/linkedin.png" alt="LinkedIn" class="logo max-w-12 md:max-w-16 lg:max-w-20">
+                        </a>
+                        <a href="https://www.instagram.com/aravalischool85/?hl=en" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="hover:scale-110 transform transition duration-300">
+                            <img src="images/instagram.png" alt="Instagram" class="logo max-w-12 md:max-w-16 lg:max-w-20">
+                        </a>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <p>&copy; 2024 BHARAT CHRONICLES | WHERE INDIA'S PAST MEETS ITS FUTURE</p>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>

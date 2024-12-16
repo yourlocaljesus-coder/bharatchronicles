@@ -123,23 +123,65 @@
             transform: translateY(-10px);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
         }
+         
+        @media (max-width: 1600px) {
+        }
     </style>
 </head>
 <body class="bg-gradient-to-t from-blue-700 to-blue-400">
-    <nav class="bg-white flex items-center justify-between text-black max-h-20 py-5 max-w-6xl">
-        <img src="images/bharat_chronicles-removebg-preview.png" alt="Logo" class="max-h-20 mr-4 fade-in">
-        <ul class="flex space-x-5">
-            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in' href='/'>Home</a></li>
-            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in' href='/history'>Brief History</a></li>
-            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in active' href='/wonders'>Wonders Of India</a></li>
-            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in' href='/geography'>Geography</a></li>
-            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in' href='/patriots'>Patriots</a></li>
-            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in' href='/feedback'>Feedback</a></li>
+    <nav class="bg-white border-gray-200 dark:bg-white max-w-[1280px] rounded-s-8xl"> 
+        <div class="flex flex-wrap items-center justify-between w-full"> 
+            <a href="https://bharatchronicles.onrender.com" class="flex items-center space-x-3 rtl:space-x-reverse"> 
+                <img src="images/bharat_chronicles-removebg-preview.png" class="max-h-16" alt="Bharat Chronicles" /> 
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-26 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul class="w-full font-medium text-lg flex flex-col  md:p-0  no-border rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:bg-white dark:bg-white md:dark:bg-white dark:border-gray-700 md:justify-end">
+                    <li>
+                        <a href="index.html" class="block py-1 px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 no-underline hover:text-red-500 underline-hover md:p-0 dark:text-black md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-red-500 md:dark:hover:bg-transparent">Home</a>
+                    </li>
+                    <li>
+                        <a href="history.html" class="block py-1 px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 no-underline hover:text-red-500 underline-hover md:p-0 dark:text-black md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-red-500 md:dark:hover:bg-transparent">Brief History</a>
+                    </li>
+                    <li>
+                        <a href="wonders.html" class="block py-1 px-2 bg-gray-300 rounded md:bg-transparent no-underline hover:text-red-500 underline-hover md:p-0 dark:text-black md:dark:text-red-500 active" aria-current="page">Wonders of India</a>
+                    </li>
+                    <li>
+                        <a href="Geography.html" class="block py-1 px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 no-underline hover:text-red-500 underline-hover md:p-0 dark:text-black md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-red-500 md:dark:hover:bg-transparent">Geography</a>
+                    </li>
+                    <li>
+                        <a href="patriots.html" class="block py-1 px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 no-underline hover:text-red-500 underline-hover md:p-0 dark:text-black md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-red-500 md:dark:hover:bg-transparent">Patriots</a>
+                    </li>
+                    <li>
+                        <a href="Feedback.html" class="block py-1 px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 no-underline hover:text-red-500 underline-hover md:p-0 dark:text-black md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-red-500 md:dark:hover:bg-transparent">Feedback</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
-
+    
+    <script>
+        const menuButton = document.querySelector('[data-collapse-toggle="navbar-default"]');
+        const navbar = document.getElementById('navbar-default');
+    
+        menuButton.addEventListener('click', () => {
+            const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+            menuButton.setAttribute('aria-expanded', !isExpanded);
+            navbar.classList.toggle('hidden', isExpanded);
+        });
+    </script>
+    
+    
     <section class="main bg-gradient-to-t from-blue-700 to-blue-400">
         <div class="flex flex-col items-center pt-40 text-white">
-            <h1 class="font-serif text-9xl mb-0 justify-center text-white underline">Wonders of India</h1>
+            <h1 class="font-serif text-center text-white mb-0 underline" style="font-size: clamp(3rem, 8vw, 9rem);">
+                Wonders of India
+            </h1>
             <div class="container mx-auto p-4">
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 items-center">
                     <div class="pop-out-card">
@@ -188,7 +230,7 @@
                         <img src="images/ajanta.png" alt="Card Image" class="w-full h-40 object-cover" />
                         <div class="p-4">
                             <h3 class="text-lg font-semibold mb-2 text-black">Ajanta and Ellora Caves</h3>
-                            <p class="text-sm text-gray-600">Ajanta and Ellora Caves, UNESCO World Heritage Sites that showcase the artistic achievements of ancient India. Ajanta features stunning Buddhist frescoes, while Ellora’s rock-cut monuments represent a harmonious blend of Hindu, Jain, and Buddhist cultures. These caves continue to fascinate visitors.</p>
+                            <p class="text-sm text-gray-600">The Ajanta and Ellora Caves, UNESCO World Heritage Sites, showcase ancient India's artistic achievements. Ajanta is known for its Buddhist frescoes, while Ellora features rock-cut monuments representing Hindu, Jain, and Buddhist cultures. These caves remain a captivating attraction.</p>
                         </div>
                     </div>
                     <div class="pop-out-card">
@@ -202,28 +244,29 @@
                         <img src="images/golden.png" alt="Card Image" class="w-full h-40 object-cover" />
                         <div class="p-4">
                             <h3 class="text-lg font-semibold mb-2 text-black">Golden Temple</h3>
-                            <p class="text-sm text-gray-600">The Golden Temple, or Harmandir Sahib, is a serene spiritual hub and the holiest shrine of Sikhism. Surrounded by the Amrit Sarovar, its gold-covered dome glistens in the sunlight. Pilgrims and visitors from across the globe come to experience its peaceful atmosphere and learn about its cultural significance.</p>
+                            <p class="text-sm text-gray-600">
+                                The Golden Temple, or Harmandir Sahib, is the holiest shrine of Sikhism. Surrounded by the Amrit Sarovar, its gold-covered dome glistens in the sunlight. Pilgrims and visitors worldwide come to experience its peaceful atmosphere and cultural significance.</p>
                         </div>
                     </div>
                     <div class="pop-out-card">
                         <img src="images/charminar.png" alt="Card Image" class="w-full h-40 object-cover" />
                         <div class="p-4">
                             <h3 class="text-lg font-semibold mb-2 text-black">Charminar</h3>
-                            <p class="text-sm text-gray-600">Built in 1591 by Muhammad Quli Qutb Shah, the Charminar is an iconic structure in Hyderabad. With its four grand arches and minarets, it represents Indo-Islamic architecture. Surrounded by bustling markets, the Charminar is a vibrant cultural and historical landmark that draws countless visitors every year.</p>
+                            <p class="text-sm text-gray-600">Built in 1591 by Muhammad Quli Qutb Shah, the Charminar is an iconic Hyderabad landmark. With its four grand arches and minarets, it showcases Indo-Islamic architecture. Surrounded by lively markets, the Charminar is a vibrant cultural and historical attraction.</p>
                         </div>
                     </div>
                     <div class="pop-out-card">
                         <img src="images/rani.png" alt="Card Image" class="w-full h-40 object-cover" />
                         <div class="p-4">
                             <h3 class="text-lg font-semibold mb-2 text-black">Rani ki Vav</h3>
-                            <p class="text-sm text-gray-600">Rani ki Vav, an 11th-century stepwell, is a UNESCO World Heritage Site known for its intricate carvings. Built to honor the king by his queen, it features detailed sculptures and mythological depictions. This marvel of engineering highlights India’s advanced water management systems and artistic achievements of the time.</p>
+                            <p class="text-sm text-gray-600">Rani ki Vav, an 11th-century stepwell and UNESCO World Heritage Site, is known for its intricate carvings and sculptures. Built by Queen Udayamati to honor her king, it showcases advanced water management and artistic excellence.</p>
                         </div>
                     </div>
                     <div class="pop-out-card">
                         <img src="images/sanchistupa.png" alt="Card Image" class="w-full h-40 object-cover" />
                         <div class="p-4">
                             <h3 class="text-lg font-semibold mb-2 text-black">Sanchi Stupa</h3>
-                            <p class="text-sm text-gray-600">Built in the 3rd century BCE by Emperor Ashoka, the Sanchi Stupa is one of the oldest stone structures in India. This UNESCO World Heritage Site is surrounded by intricately carved gateways that narrate stories of Buddha’s life and teachings. It remains a symbol of Buddhist heritage and peaceful spirituality.</p>
+                            <p class="text-sm text-gray-600">Built in the 3rd century BCE by Emperor Ashoka, the Sanchi Stupa is one of India's oldest stone structures. A UNESCO World Heritage Site, it features intricately carved gateways depicting Buddha’s life and teachings, symbolizing Buddhist heritage and peaceful spirituality.</p>
                         </div>
                     </div>
                 </div>
@@ -231,35 +274,53 @@
         </div>
 	</section>
         <hr>
-        <section class="about-us-section bg-gradient-to-t from-blue-400 to-blue-700" id="about-us">
-            <h2 class="about-us-title">About Us</h2>
-            <div class="card">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.6567905860034!2d77.35540691174769!3d28.39943239452555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdcddb26bdc75%3A0xb50944a190a0da51!2sAravali%20International%20School%20Sec-85!5e0!3m2!1sen!2sin!4v1731078474856!5m2!1sen!2sin" 
-                    width="100%" 
-                    height="500" 
-                    style="border:0;" 
-                    allowfullscreen 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-                <div class="card-content">
-                    <h3 class="card-title">Aravali International School, Sector-85</h3>
-                    <p class="card-description">Aravali International School, Sector-85, Greater-Faridabad, Haryana, India</p>
-                    <p>&copy; BHARAT CHRONICLES | WHERE INDIA'S PAST MEETS ITS FUTURE</p>
-                    <div class="flex justify-center space-x-6 mt-8 items-center">
-                        <a href="https://www.youtube.com/@aravaliinternationalschool1671" target="_blank" rel="noopener noreferrer" class="text-red-600 hover:text-red-800 transition duration-300">
-                            <img src="images/youtube.png" alt="YouTube" class="max-w-12 max-h-12">
-                        </a>
-                        <a href="https://in.linkedin.com/company/aravali-international-school-faridabad" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition duration-300">
-                            <img src="images/linkedin.png" alt="LinkedIn" class="max-w-12 max-h-12">
-                        </a>
-                        <a href="https://www.instagram.com/aravalischool85/?hl=en" target="_blank" rel="noopener noreferrer" class="text-pink-500 hover:text-pink-900 transition duration-300">
-                            <img src="images/instagram.png" alt="Instagram" class="max-w-12 max-h-12">
-                        </a>
+        <footer class="bg-gradient-to-t from-blue-400 to-blue-700 text-white py-8">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="about-us">
+                        <h3 class="text-2xl font-semibold mb-4">About Us</h3>
+                        <p class="text-lg">We are a platform that connects India's rich cultural heritage with its bright future. Stay tuned for exciting content and more!</p>
                     </div>
+                    <div class="contact-info text-center md:text-left">
+                        <h3 class="text-2xl font-semibold mb-4">Contact Us</h3>
+                        <a href="feedback.html" class="font-bold no-underline">
+                            <p>Click here to give your feedback</p>
+                        </a>
+                        <p class="text-lg">(+91) 8588802550</p>
+                        <p class="text-lg">Greater Faridabad, Haryana, India</p>
+                    </div>
+    
+                    <div class="social-links text-center md:text-right">
+                        <h3 class="text-2xl font-semibold mb-4">Follow Us</h3>
+                        <div class="flex justify-center space-x-6 mt-6">
+                            <a href="https://www.youtube.com/@aravaliinternationalschool1671" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="hover:scale-110 transform transition duration-300">
+                                <img src="images/youtube.png" alt="YouTube" class="logo max-w-12 md:max-w-16 lg:max-w-20">
+                            </a>
+                            <a href="https://in.linkedin.com/company/aravali-international-school-faridabad" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="hover:scale-110 transform transition duration-300">
+                                <img src="images/linkedin.png" alt="LinkedIn" class="logo max-w-12 md:max-w-16 lg:max-w-20">
+                            </a>
+                            <a href="https://www.instagram.com/aravalischool85/?hl=en" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="hover:scale-110 transform transition duration-300">
+                                <img src="images/instagram.png" alt="Instagram" class="logo max-w-12 md:max-w-16 lg:max-w-20">
+                            </a>
+                        </div>
+                    </div>
+        
                 </div>
             </div>
-        </section>
+            <div class="text-center mt-8">
+                <p>&copy; 2024 BHARAT CHRONICLES | WHERE INDIA'S PAST MEETS ITS FUTURE</p>
+            </div>
+        </footer>
+        
+        
     </body>
-</html>
+    </html>

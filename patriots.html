@@ -116,127 +116,177 @@
             margin-bottom: 40px;
             font-weight: bold;
         }
+         
+        @media (max-width: 1600px) {
+
+        }
     </style>
 </head>
 <body>
-    <nav class="bg-white flex items-center justify-between text-black max-h-20 py-5 max-w-6xl">
-        <img src="images/bharat_chronicles-removebg-preview.png" alt="Logo" class="max-h-20 mr-4 fade-in">
-        <ul class="flex space-x-5">
-            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in' href='/'>Home</a></li>
-            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in' href='/history'>Brief History</a></li>
-            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in' href='/wonders'>Wonders Of India</a></li>
-            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in' href='/geography'>Geography</a></li>
-            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in active' href='/patriots'>Patriots</a></li>
-            <li class="cursor-pointer"><a class='no-underline hover:text-red-500 underline-hover fade-in' href='/feedback'>Feedback</a></li>
+    <nav class="bg-white border-gray-200 dark:bg-white max-w-[1280px] rounded-s-8xl"> 
+        <div class="flex flex-wrap items-center justify-between w-full"> 
+            <a href="https://bharatchronicles.onrender.com" class="flex items-center space-x-3 rtl:space-x-reverse"> 
+                <img src="images/bharat_chronicles-removebg-preview.png" class="max-h-16" alt="Bharat Chronicles" /> 
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-26 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul class="w-full font-medium text-lg flex flex-col  md:p-0  no-border rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:bg-white dark:bg-white md:dark:bg-white dark:border-gray-700 md:justify-end">
+                    <li>
+                        <a href="index.html" class="block py-1 px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 no-underline hover:text-red-500 underline-hover md:p-0 dark:text-black md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-red-500 md:dark:hover:bg-transparent">Home</a>
+                    </li>
+                    <li>
+                        <a href="history.html" class="block py-1 px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 no-underline hover:text-red-500 underline-hover md:p-0 dark:text-black md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-red-500 md:dark:hover:bg-transparent">Brief History</a>
+                    </li>
+                    <li>
+                        <a href="wonders.html" class="block py-1 px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 no-underline hover:text-red-500 underline-hover md:p-0 dark:text-black md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-red-500 md:dark:hover:bg-transparent">Wonders of India</a>
+                    </li>
+                    <li>
+                        <a href="Geography.html" class="block py-1 px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 no-underline hover:text-red-500 underline-hover md:p-0 dark:text-black md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-red-500 md:dark:hover:bg-transparent">Geography</a>
+                    </li>
+                    <li>
+                        <a href="patriots.html" class="block py-1 px-2 bg-gray-300 rounded md:bg-transparent no-underline hover:text-red-500 underline-hover md:p-0 dark:text-black md:dark:text-red-500 active" aria-current="page">Patriots</a>
+                    </li>
+                    <li>
+                        <a href="Feedback.html" class="block py-1 px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 no-underline hover:text-red-500 underline-hover md:p-0 dark:text-black md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-red-500 md:dark:hover:bg-transparent">Feedback</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
+    
+    <script>
+        const menuButton = document.querySelector('[data-collapse-toggle="navbar-default"]');
+        const navbar = document.getElementById('navbar-default');
+    
+        menuButton.addEventListener('click', () => {
+            const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+            menuButton.setAttribute('aria-expanded', !isExpanded);
+            navbar.classList.toggle('hidden', isExpanded);
+        });
+    </script>
+    
+    
     <section>
         <div class="main bg-gradient-to-t from-blue-700 to-blue-400 flex flex-col items-center justify-start pt-40 text-white">
-          <h1 class="font-serif text-9xl mb-11 justify-center underline">Patriots</h1>
+            <h1 class="font-serif text-6xl sm:text-7xl md:text-8xl lg:text-9xl mb-11 text-center underline">Patriots</h1>
           <div class="max-w-screen-xl mx-auto py-10 space-y-8">
-
-      <div
-  class="flex h-[420px] bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-  
-
-        <div class="flex-1 flex flex-col justify-center p-6">
-          <h2 class="text-4xl font-semibold text-gray-800 mb-2">Mahatma Gandhi</h2>
-          <p class="text-2xl text-gray-700">
-      Known as the "Father of the Nation," Mahatma Gandhi led India's fight for independence through nonviolence 
-      (Satyagraha). Key movements include the Salt March (1930), the Non-Cooperation Movement (1920–1922), and the 
-      Quit India Movement (1942). His philosophy inspired global leaders like Martin Luther King Jr. and Nelson Mandela.
-          </p>
-          <p class="text-2xl text-gray-700 mt-2">
-      Gandhi believed in truth, nonviolence, and equality. His legacy continues to guide social and political movements
-      worldwide.
-    </p>
-        </div>
-
-
-        <div class="w-1/3 bg-gray-200 flex items-center justify-center">
-    <span class="text-gray-500 text-sm"><img src="images/bapu.png"></span>
-  </div>
-      </div>
-
-
-      <div
-  class="flex h-[420px] bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl mt-6">
-  
-
-        <div class="flex-1 flex flex-col justify-center p-6">
-          <h2 class="text-4xl font-semibold text-gray-800 mb-2">Subhash Chandra Bose</h2>
-          <p class="text-2xl text-gray-700">
-      Subhas Chandra Bose, also known as "Netaji," was a prominent leader who founded the **Indian National Army (INA)**. 
-      His motto, "Give me blood, and I will give you freedom," inspired millions to join the fight for independence.
-          </p>
-          <p class="text-2xl text-gray-700 mt-2">
-      Bose’s leadership in the armed struggle against British rule, despite differences with Mahatma Gandhi, marked him as 
-      a fierce nationalist. His disappearance in 1945 remains shrouded in mystery.
-          </p>
-        </div>
-
-        <div class="w-1/3 bg-gray-200 flex items-center justify-center">
-          <span class="text-gray-500 text-sm"><img src="images/bose.png"></span>
-        </div>
-            </div>
-
-
-      <div
-  class="flex h-[420px] bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl mt-6">
-  
-
-        <div class="flex-1 flex flex-col justify-center p-6">
-          <h2 class="text-4xl font-semibold text-gray-800 mb-2">Bhagat Singh</h2>
-          <p class="text-2xl text-gray-700">
-      Bhagat Singh, a revolutionary socialist, became a symbol of fearless patriotism. Known for his bold actions, 
-      such as the bombing of the Central Legislative Assembly in 1929, he used his trial as a platform to promote 
-      revolutionary ideas.
-          </p>
-          <p class="text-2xl text-gray-700 mt-2 ">
-      His famous quote, "They may kill me, but they cannot kill my ideas," captures his indomitable spirit. Bhagat Singh 
-      was martyred at the age of 23.
-          </p>
-        </div>
-
-
-        <div class="w-1/3 bg-gray-200 flex items-center justify-center">
-          <span class="text-gray-500 text-sm"><img src="images/singh.png"></span>
-        </div>
-            </div>
-      </div>
-      </div>
-      </div>
+            <div class="flex flex-col lg:flex-row gap-6">
+                <div class="flex flex-col items-center gap-12 p-6">
+                   
+                    <div class="flex flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl w-full md:w-[80%] h-[auto]">
+                    
+                      <div class="flex-1 flex flex-col justify-center p-6">
+                        <h2 class="text-4xl font-semibold text-gray-800 mb-2">Mahatma Gandhi</h2>
+                        <p class="text-2xl text-gray-700">
+                          Known as the "Father of the Nation," Mahatma Gandhi led India's fight for independence through nonviolence 
+                          (Satyagraha). Key movements include the Salt March (1930), the Non-Cooperation Movement (1920–1922), and the 
+                          Quit India Movement (1942). His philosophy inspired global leaders like Martin Luther King Jr. and Nelson Mandela.
+                        </p>
+                        <p class="text-2xl text-gray-700 mt-2">
+                          Gandhi believed in truth, nonviolence, and equality. His legacy continues to guide social and political movements worldwide.
+                        </p>
+                      </div>
+                  
+                      <div class="w-full md:w-1/3 bg-gray-200 flex items-center justify-center h-[300px] md:h-[420px]">
+                        <img src="images/bapu.png" class="w-full h-full object-cover object-center" style="object-position: center;">
+                      </div>
+                    </div>
+                  
+                    <div class="flex flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl w-full md:w-[80%] h-[auto]">
+                   
+                      <div class="flex-1 flex flex-col justify-center p-6">
+                        <h2 class="text-4xl font-semibold text-gray-800 mb-2">Subhash Chandra Bose</h2>
+                        <p class="text-2xl text-gray-700">
+                          Subhas Chandra Bose, also known as "Netaji," was a prominent leader who founded the 
+                          <span class="font-bold">Indian National Army (INA)</span>. His motto, "Give me blood, and I will give you freedom," inspired millions to join the fight for independence.
+                        </p>
+                        <p class="text-2xl text-gray-700 mt-2">
+                          Bose’s leadership in the armed struggle against British rule, despite differences with Mahatma Gandhi, marked him as 
+                          a fierce nationalist. His disappearance in 1945 remains shrouded in mystery.
+                        </p>
+                      </div>
+                  
+                      <div class="w-full md:w-1/3 bg-gray-200 flex items-center justify-center h-[300px] md:h-[420px]">
+                        <img src="images/bose.png" class="w-full h-full object-cover object-center" style="object-position: center;">
+                      </div>
+                    </div>
+                  
+                    <div class="flex flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl w-full md:w-[80%] h-[auto]">
+                      
+                      <div class="flex-1 flex flex-col justify-center p-6">
+                        <h2 class="text-4xl font-semibold text-gray-800 mb-2">Bhagat Singh</h2>
+                        <p class="text-2xl text-gray-700">
+                          Bhagat Singh, a revolutionary socialist, became a symbol of fearless patriotism. Known for his bold actions, 
+                          such as the bombing of the Central Legislative Assembly in 1929, he used his trial as a platform to promote 
+                          revolutionary ideas.
+                        </p>
+                        <p class="text-2xl text-gray-700 mt-2">
+                          His famous quote, "They may kill me, but they cannot kill my ideas," captures his indomitable spirit. Bhagat Singh 
+                          was martyred at the age of 23.
+                        </p>
+                      </div>
+                  
+                      <div class="w-full md:w-1/3 bg-gray-200 flex items-center justify-center h-[300px] md:h-[420px]">
+                        <img src="images/singh.png" class="w-full h-full object-cover object-center" style="object-position: center;">
+                      </div>
+                    </div>
+                  </div>
+                  
       </section>
       
           <hr>
-          <section class="about-us-section bg-gradient-to-t from-blue-400 to-blue-700" id="about-us">
-              <h2 class="about-us-title">About Us</h2>
-              <div class="card">
-                  <iframe 
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.6567905860034!2d77.35540691174769!3d28.39943239452555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdcddb26bdc75%3A0xb50944a190a0da51!2sAravali%20International%20School%20Sec-85!5e0!3m2!1sen!2sin!4v1731078474856!5m2!1sen!2sin" 
-                      width="1800" 
-                      height="500" 
-                      style="border:0;" 
-                      allowfullscreen 
-                      loading="lazy" 
-                      referrerpolicy="no-referrer-when-downgrade">
-                  </iframe>
-                  <div class="card-content">
-                      <h3 class="card-title">Aravali International School, Sector-85</h3>
-                      <p class="card-description">Aravali International School, Sector-85, Greater-Faridabad, Haryana, India</p>
-                      <p>&copy; BHARAT CHRONICLES | WHERE INDIA'S PAST MEETS ITS FUTURE</p>
-                      <div class="pl-96 pr-96 max-w-screen flex justify-center space-x-6 mt-8 items-center">
-                          <a href="https://www.youtube.com/@aravaliinternationalschool1671" target="_blank" rel="noopener noreferrer" class="text-red-600 hover:text-red-800 transition duration-300">
-                              <img src="images/youtube.png" alt="YouTube" class="max-w-12 max-h-12">
-                          </a>
-                          <a href="https://in.linkedin.com/company/aravali-international-school-faridabad" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition duration-300">
-                              <img src="images/linkedin.png" alt="LinkedIn" class="max-w-12 max-h-12">
-                          </a>
-                          <a href="https://www.instagram.com/aravalischool85/?hl=en" target="_blank" rel="noopener noreferrer" class="text-pink-500 hover:text-pink-900 transition duration-300">
-                              <img src="images/instagram.png" alt="Instagram" class="max-w-12 max-h-12">
-                          </a>
-                      </div>
-                  </div>
-              </div>
-          </section>          
-</body>
-</html>
+          <footer class="bg-gradient-to-t from-blue-400 to-blue-700 text-white py-8">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="about-us">
+                        <h3 class="text-2xl font-semibold mb-4">About Us</h3>
+                        <p class="text-lg">We are a platform that connects India's rich cultural heritage with its bright future. Stay tuned for exciting content and more!</p>
+                    </div>
+                    <div class="contact-info text-center md:text-left">
+                        <h3 class="text-2xl font-semibold mb-4">Contact Us</h3>
+                        <a href="feedback.html" class="font-bold no-underline">
+                            <p>Click here to give your feedback</p>
+                        </a>
+                        <p class="text-lg">(+91) 8588802550</p>
+                        <p class="text-lg">Greater Faridabad, Haryana, India</p>
+                    </div>
+    
+                    <div class="social-links text-center md:text-right">
+                        <h3 class="text-2xl font-semibold mb-4">Follow Us</h3>
+                        <div class="flex justify-center space-x-6 mt-6">
+                            <a href="https://www.youtube.com/@aravaliinternationalschool1671" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="hover:scale-110 transform transition duration-300">
+                                <img src="images/youtube.png" alt="YouTube" class="logo max-w-12 md:max-w-16 lg:max-w-20">
+                            </a>
+                            <a href="https://in.linkedin.com/company/aravali-international-school-faridabad" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="hover:scale-110 transform transition duration-300">
+                                <img src="images/linkedin.png" alt="LinkedIn" class="logo max-w-12 md:max-w-16 lg:max-w-20">
+                            </a>
+                            <a href="https://www.instagram.com/aravalischool85/?hl=en" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="hover:scale-110 transform transition duration-300">
+                                <img src="images/instagram.png" alt="Instagram" class="logo max-w-12 md:max-w-16 lg:max-w-20">
+                            </a>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <p>&copy; 2024 BHARAT CHRONICLES | WHERE INDIA'S PAST MEETS ITS FUTURE</p>
+            </div>
+        </footer>
+        
+        
+    </body>
+    </html>
